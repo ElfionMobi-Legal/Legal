@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lirra — Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.65; color: #1a2428; background: #e8eef0; padding: 24px; }
+        .container { max-width: 820px; margin: 0 auto; background: #fff; padding: 48px 44px; border-radius: 16px; box-shadow: 0 8px 32px rgba(26,36,40,0.06); }
+        h1 { font-size: 2.25rem; color: #1a2428; text-align: center; margin-bottom: 8px; letter-spacing: -0.02em; }
+        .subtitle { text-align: center; color: #5c6e76; margin-bottom: 28px; font-size: 0.95rem; }
+        h2 { font-size: 1.35rem; color: #1a2428; margin: 36px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #4f6f64; }
+        h3 { font-size: 1.05rem; color: #223034; margin: 20px 0 8px; }
+        p { margin-bottom: 14px; text-align: justify; }
+        ul, ol { margin: 0 0 16px 22px; }
+        li { margin-bottom: 8px; }
+        .highlight { background: #f4f7f8; border-left: 4px solid #4f6f64; padding: 16px 18px; border-radius: 6px; margin: 20px 0; }
+        .warning { background: #faf6f0; border-left: 4px solid #e8c99a; padding: 16px 18px; border-radius: 6px; margin: 20px 0; }
+        .contact-info { background: #f4f7f8; padding: 20px; border-radius: 10px; margin-top: 12px; }
+        .last-updated { text-align: center; color: #7a8e95; font-style: italic; margin-top: 40px; padding-top: 24px; border-top: 1px solid #e8eef0; font-size: 0.9rem; }
+        a { color: #4f6f64; }
+        code { font-size: 0.9em; background: #f4f7f8; padding: 1px 6px; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0 20px; font-size: 0.95rem; }
+        th, td { border: 1px solid #e8eef0; padding: 10px 12px; text-align: left; vertical-align: top; }
+        th { background: #f4f7f8; }
+        @media (max-width: 640px) { .container { padding: 28px 20px; } h1 { font-size: 1.75rem; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Lirra · Elfion Mobile · Effective July 24, 2026</p>
+
+    <div class="highlight">
+        <p><strong>Lirra</strong> (iOS/Android package identifier <code>mobi.elfion.lirra</code>) is a morning ritual and habit-scoring application published by <strong>Elfion Mobile</strong> (“we”, “us”, “our”). This Privacy Policy describes how we collect, use, store, share, and protect information when you use Lirra (the “App”) and related services (including our API hosted on Cloudflare Workers, e.g. <code>lirra-api.*.workers.dev</code> or a production API domain).</p>
+        <p>By downloading, accessing, or using Lirra, you agree to this Policy. If you do not agree, do not use the App.</p>
+    </div>
+
+    <div class="warning">
+        <p><strong>Important — not a medical product:</strong> Lirra’s <strong>Calm Score</strong> is a habit score based on your morning protocol, self-report, and streak. It is <strong>not</strong> a laboratory measurement, hormone test, cortisol reading, medical diagnosis, or treatment. The App is for personal wellness and habit support only.</p>
+    </div>
+
+    <h2>1. Who we are &amp; scope</h2>
+    <p>This Policy applies to personal data processed in connection with Lirra on mobile devices and our backend infrastructure. It does not cover third-party websites, app stores (Apple App Store / Google Play), or services that we do not control, even if linked from the App.</p>
+    <p><strong>Controller / publisher contact:</strong> Elfion Mobile · <a href="mailto:elfionmobi@gmail.com">elfionmobi@gmail.com</a></p>
+
+    <h2>2. Summary (at a glance)</h2>
+    <table>
+        <tr><th>Category</th><th>Examples</th><th>Purpose</th></tr>
+        <tr><td>Account</td><td>Anonymous user ID (Supabase Auth)</td><td>Provide the service; sync ritual history &amp; Pro status</td></tr>
+        <tr><td>Profile / onboarding</td><td>Optional display name; age band; symptoms; morning habits; goal; wake time; timezone; locale</td><td>Personalize today’s protocol &amp; reminders</td></tr>
+        <tr><td>Ritual &amp; score data</td><td>Completed steps, self-report, Calm Score, streak, soft sleep check-in</td><td>Show progress, scoring, history</td></tr>
+        <tr><td>Subscriptions</td><td>Entitlement via Apple/Google + RevenueCat</td><td>Unlock Lirra Pro; restore purchases</td></tr>
+        <tr><td>On-device only</td><td>Journal note; theme; notification schedule; widget cache</td><td>UX on your device (not uploaded as a journal archive)</td></tr>
+        <tr><td>Diagnostics (optional)</td><td>Firebase Analytics / Crashlytics when enabled</td><td>Stability &amp; product improvement</td></tr>
+    </table>
+
+    <h2>3. Information we collect</h2>
+
+    <h3>3.1 Information you provide</h3>
+    <ul>
+        <li><strong>Onboarding answers.</strong> Age band, selected symptoms/habits, goal, usual wake time, and optional display name used for greetings and personalization.</li>
+        <li><strong>Ritual inputs.</strong> Which protocol steps you complete or skip, optional self-report (how you feel), and optional soft sleep quality (rough / ok / rested).</li>
+        <li><strong>Support communications.</strong> If you email us, we process your email address and message content to respond.</li>
+    </ul>
+
+    <h3>3.2 Information created by the App and our servers</h3>
+    <ul>
+        <li><strong>User identifiers.</strong> On first use we typically create an anonymous authentication session (Supabase Auth). That ID links your profile, ritual days, streak, and subscription status. Optional Sign in with Apple / Google may be offered later to upgrade the same account.</li>
+        <li><strong>Scores &amp; history.</strong> Calm Score, score band, streak counters, day keys, and related breakdowns stored so you can see progress across devices/sessions.</li>
+        <li><strong>Technical request metadata.</strong> Timestamps, request IDs, approximate IP for security/rate limiting, and error codes as needed to operate the API.</li>
+    </ul>
+
+    <h3>3.3 On-device data (generally not uploaded as content archives)</h3>
+    <ul>
+        <li><strong>Journal (optional one-line note):</strong> stored locally on your device for the day; not designed as a cloud journal sync.</li>
+        <li><strong>Preferences:</strong> theme, language override, night-prep nudge flag, card/widget style, onboarding completion.</li>
+        <li><strong>Local notifications:</strong> wake-window and optional evening reminders scheduled on-device (no marketing push server in MVP).</li>
+        <li><strong>Home-screen widget cache:</strong> recent Calm Score / streak shown via App Group / App Widget storage on device.</li>
+    </ul>
+
+    <h3>3.4 Purchases and entitlements</h3>
+    <p>If you subscribe to <strong>Lirra Pro</strong> (weekly, monthly, or yearly), payment is processed by <strong>Apple</strong> or <strong>Google</strong>. We receive entitlement/status information through <strong>RevenueCat</strong> and/or store APIs so we can unlock Pro features (for example Night Prep, NSDR deep rest, themes). We do <strong>not</strong> receive or store your full payment card number.</p>
+
+    <h3>3.5 Optional analytics</h3>
+    <p>When Firebase Analytics / Crashlytics is configured in a release build, we may process aggregated usage events, device model, OS version, app version, crash stacks, and instance identifiers as processed by Google under their terms. If those SDKs are not enabled, we do not send that analytics traffic.</p>
+
+    <h3>3.6 Data we do <em>not</em> collect (MVP)</h3>
+    <ul>
+        <li>HealthKit / Health Connect clinical metrics, heart rate, or lab values</li>
+        <li>Camera, microphone, contacts, precise GPS for advertising</li>
+        <li>Advertising ID for cross-app tracking; we do not run third-party ad networks in the App</li>
+        <li>Permanent voice or video recordings</li>
+    </ul>
+
+    <h2>4. How we use information</h2>
+    <ul>
+        <li>To build your personal morning protocol and display Calm Score / streak</li>
+        <li>To schedule local wake and optional evening reminders you enable</li>
+        <li>To unlock and restore Lirra Pro entitlements</li>
+        <li>To secure the service (authentication, rate limiting, abuse prevention)</li>
+        <li>To fix bugs, measure reliability, and improve the product</li>
+        <li>To respond to support and deletion requests and meet legal obligations</li>
+    </ul>
+    <p>We do <strong>not</strong> sell your personal information. We do not use your ritual answers to train unrelated third-party foundation models unless we clearly disclose a change and obtain any consent required by law.</p>
+
+    <h2>5. Legal bases (EEA/UK and similar regimes)</h2>
+    <p>Where GDPR-style rules apply, we process data under one or more of: <strong>performance of a contract</strong> (providing the App you requested); <strong>legitimate interests</strong> (security, product improvement, fraud prevention—balanced against your rights); <strong>consent</strong> where required (e.g., notification permission); and <strong>legal obligation</strong> when we must retain or disclose information.</p>
+
+    <h2>6. Sharing with service providers</h2>
+    <p>We share data with vendors who process it on our instructions to operate Lirra:</p>
+    <ul>
+        <li><strong>Cloudflare</strong> — API hosting (Workers), rate-limit KV, security</li>
+        <li><strong>Supabase</strong> — authentication and database (profiles, ritual days, streaks, subscriptions)</li>
+        <li><strong>RevenueCat</strong> — subscription entitlement management</li>
+        <li><strong>Apple / Google</strong> — app distribution, billing, and (if used) Sign in with Apple / Google</li>
+        <li><strong>Google Firebase</strong> (optional) — analytics and crash reporting</li>
+    </ul>
+    <p>These providers may process data in the United States or other countries. Where required, we rely on appropriate transfer mechanisms offered by those providers (such as Standard Contractual Clauses).</p>
+    <p>We may also disclose information if required by law, to protect rights and safety, or in connection with a merger, acquisition, or asset sale (with notice where required).</p>
+
+    <h2>7. Retention</h2>
+    <ul>
+        <li><strong>Profile, ritual history, streak:</strong> retained while your account remains active and as needed to provide the service</li>
+        <li><strong>Subscription records:</strong> retained as needed for accounting, fraud prevention, and legal compliance</li>
+        <li><strong>On-device prefs / journal:</strong> until you clear app data, uninstall, or delete your account (server wipe does not always clear every local file until reinstall)</li>
+        <li><strong>Support emails:</strong> retained as needed to resolve your request</li>
+    </ul>
+    <p>Uninstalling the App removes local device data but does <strong>not</strong> automatically erase server-side records tied to your user ID. Use in-app <strong>Settings → Delete account</strong> or contact us as described below / on our Account Deletion page.</p>
+
+    <h2>8. Your rights &amp; choices</h2>
+    <p>Depending on where you live, you may have rights to access, correct, delete, restrict, or port personal data, to object to certain processing, and to withdraw consent. You may also lodge a complaint with a supervisory authority.</p>
+    <p><strong>Notifications:</strong> You can deny or revoke notification permission in system settings; morning reminders will not fire without it.</p>
+    <p><strong>Marketing ads:</strong> We do not currently run third-party ad networks inside Lirra.</p>
+
+    <h2>9. Children’s privacy</h2>
+    <p>Lirra is not directed to children under 13 (or the higher age required in your region for digital consent). We do not knowingly collect personal information from children in violation of applicable law. If you believe a child has provided data inappropriately, contact us and we will take reasonable steps to delete it.</p>
+
+    <h2>10. Security</h2>
+    <p>We use HTTPS in transit, access controls for production systems, and least-privilege service credentials. No method of transmission or storage is 100% secure; we encourage you to use up-to-date devices and protect your store accounts.</p>
+
+    <h2>11. International users</h2>
+    <p>If you use Lirra from outside the country where our servers or providers operate, your information may be transferred across borders. By using the App you understand those transfers may occur as described in this Policy.</p>
+
+    <h2>12. Changes to this Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The “Last Updated” date will change when we do. Material changes may be highlighted in the App or store listing. Continued use after an update constitutes acceptance of the revised Policy where permitted by law.</p>
+
+    <h2>13. Contact</h2>
+    <div class="contact-info">
+        <p>Privacy questions, data-subject requests, or deletion requests:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:elfionmobi@gmail.com">elfionmobi@gmail.com</a></li>
+            <li><strong>Subject line:</strong> Privacy — Lirra</li>
+            <li><strong>Helpful to include:</strong> platform (iOS/Android), approximate first-use date</li>
+            <li><strong>Account deletion page:</strong> <a href="account-deletion-en.html">account-deletion-en.html</a></li>
+            <li><strong>Typical response:</strong> within 24–72 hours for acknowledgment; completion within a reasonable period as required by law</li>
+        </ul>
+    </div>
+
+    <div class="last-updated">
+        <p><strong>Last Updated:</strong> July 24, 2026</p>
+        <p><strong>Version:</strong> 1.0</p>
+        <p><strong>Publisher:</strong> Elfion Mobile · Package <code>mobi.elfion.lirra</code></p>
+    </div>
+</div>
+</body>
+</html>
